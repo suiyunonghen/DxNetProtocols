@@ -70,18 +70,18 @@ func main()  {
 ```
 # 说明
 FTPServer包含方法
->MapDir(remotedir,localPath string,isMainRoot bool)  
+>MapDir(remotedir,localPath string,isMainRoot bool)      
 >用来添加映射FTP的目录路径，remotedir指定远程路径名，映射到本地的localPath作为FTP的一个目录，isMainRoot指定是否为FTP的主目录
 
 
 >SetAnonymouseFilePermission(canRead,canWrite,canAppend,canDelete bool)  
->设定anonymouse账户的文件访问权限
+>设定anonymouse账户的文件访问权限   
 
 
->SetAnonymouseDirPermission(canCreateDir,canDelDir,canListDir,canSubDirs bool)  
+>SetAnonymouseDirPermission(canCreateDir,canDelDir,canListDir,canSubDirs bool)     
 >设定anonymouse账户的目录访问权限
 
->CopyAnonymousUserPermissions(user *FtpUser)  
+>CopyAnonymousUserPermissions(user *FtpUser)     
 >拷贝anonymouse账户权限到FtpUser中，一般是初始化FTPUser的时候会用到
 
 >WelcomeMessage用来指定FTP服务的欢迎消息  
