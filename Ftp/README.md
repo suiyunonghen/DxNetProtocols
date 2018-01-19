@@ -188,13 +188,22 @@ func main()  {
 主要提供客户端的访问处理，其实主要函数就一个ExecuteFtpCmd
 
 >ExecuteFtpCmd(cmd,param string,checkResultOk CheckCmdOkFunc)(responspkg *ftpResponsePkg, e error)
+>
 >执行FTP命令，cmd表示命令，Param表示参数，其中checkResultOk是一个函数，主要用来判定这条命令是否完整返回，如果一条命令只有一条返回结果的话，可以设定为nil，否则需要自己设定验证，比如LIST等需要传输数据的指令，一般可能会有2条指令返回，所以这里就需要用来做处理，来设定本命令是否完整结束。
+>
 >Connect(addr string)error连接到FTPServer
+>
 >Login(uid,pwd string)error登录FTP服务
+>
 >ListDir(dirName string,listfunc func(ftpFileinfo *FTPFile))
+>
 >获取目录的文件列表
 >DownLoad(remoteFileName,localFileName string,fromPos int)error
+>
 >从FTP上下载remoteFileName到本地的localFileName，从fromPos位置开始
+>
 >UpLoad(localFile,remoteFile string,fromPos int)error 
+>
 >将本地的localFile上传到FTP的本目录下的remoteFile，从fromPos开始
+>
 >其他的指令请全部参照使用ExecuteFtpCmd来进行完成。
