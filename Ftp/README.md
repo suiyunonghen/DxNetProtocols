@@ -198,6 +198,7 @@ func main()  {
 >ListDir(dirName string,listfunc func(ftpFileinfo *FTPFile))
 >
 >获取目录的文件列表
+
 >DownLoad(remoteFileName,localFileName string,fromPos int)error
 >
 >从FTP上下载remoteFileName到本地的localFileName，从fromPos位置开始
