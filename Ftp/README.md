@@ -1,10 +1,12 @@
-
 # 采用GO实现的FTP协议
 FTP协议的GO版本实现，目前实现了大部分常规FTP命令的处理，包括FTP服务端和客户端，通信框架底层采用[https://github.com/suiyunonghen/DxTcpServer](https://github.com/suiyunonghen/DxTcpServer "DxTcpServer框架")。
 # 简要说明
 > go get github.com/suiyunonghen/DxCommonLib
+> 
 > go get github.com/suiyunonghen/DxTcpServer
+> 
 > go get github.com/suiyunonghen/DxNetProtocols
+> 
 
 
 # FtpServer用法
@@ -89,6 +91,7 @@ FTPServer包含方法
 
 
 # FtpClient用法
+```go
 package main
 
 import (
@@ -180,7 +183,7 @@ func main()  {
 	trayicon.SetVisible(true)
 	app.Run()
 }
-
+```
 # 说明
 主要提供客户端的访问处理，其实主要函数就一个ExecuteFtpCmd
 
