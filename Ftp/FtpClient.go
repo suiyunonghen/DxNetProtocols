@@ -10,7 +10,7 @@ import (
 	"github.com/suiyunonghen/DxCommonLib"
 	"bytes"
 	"time"
-	"github.com/landjur/golibrary/errors"
+	"errors"
 	"strings"
 	"strconv"
 	"fmt"
